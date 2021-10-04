@@ -1,6 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
+  background-color: #c7c7c7;
 }
 #body-wrapper {
   width: 100%;
