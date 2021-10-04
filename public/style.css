@@ -1,0 +1,57 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+#body-wrapper {
+  width: 100%;
+}
+.top-nav {
+  height: 30%;
+  background-color: #c5e7e0;
+}
+.loginForm {
+  margin-top: 21.5%;
+}
+.img-resize {
+  height: 95px;
+  width: 90px;
+}
+.texts {
+  margin-right: 40px;
+}
+.nav-text {
+  margin-left: 60%;
+  margin-top: 1.5%;
+}
+
+/* 
+#footer {
+  background-color: #c5e7e0;
+  width: 100%;
+  height: auto;
+} */
+.top-nav {
+  box-shadow: 0px 2px 5px;
+}
+
+.top-nav {
+  height: 15%;
+  background-color: #c5e7e0;
+  box-shadow: 0px 6px 10px;
+}
+.nav-text {
+  margin-left: 60%;
+  margin-top: 1.5%;
+}
+.button {
+  background-color: rgb(138, 138, 105);
+}
+.form-texts {
+  color: rgb(138, 138, 105);
+}
+.body-top {
+  margin-top: 1%;
+}
+.footer {
+  background-color: #c5e7e0;
+}

@@ -1,0 +1,93 @@
+<nav class="nav navbar-expand-md fixed-top top-nav">
+    <a href="" class="nav-brand"><img width="100" src="./images/atu_logo (2).png" alt=""></a>
+    <ul class="nav-text">
+        <section>
+            <h4 class="texts"><b>ACCRA TECHNICAL UNIVERSITY</b></h4>
+            <h6 style="margin-left: 50px;">INTEGRITY, CREATIVITY & EXCELLENCE</h6>
+        </section>
+    </ul>
+</nav>
+<div class="container row body-top" style="padding-top: 10%;">
+    <div class="col-md-6" style="display: flex;">
+        
+    </div>
+
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <fieldset>
+                <label for="">First Name</label><p><%= patient.firstName %></p><br>
+                <label for="">Last name</label><p><%= patient.lastName %></p><br>
+                <label for="">Age</label><p><%= patient.age %></p><br>
+                <label for="">Temperature</label><p><%= patient.temperature %></p><br>
+                <label for="">Weight</label><p><%= patient.weight %></p><br>
+                <label for="">Bp</label><p><%= patient.bloodPressure %></p><br>
+            </fieldset>
+            
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" onclick="Enabledd1(this)" id="flexSwitchCheckChecked">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Lab Test</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label for="DDL" class="form-label">Lab Test</label>
+            <select class="form-select" id="DDL" disabled="disabled" required>
+                <option value="">Choose...</option>
+                <option>Malaria</option>
+                <option value="1">Typhoid</option>
+                <option>Urine</option>
+                <option>Pregnancy</option>
+                <option>HB Full Blood Count</option>
+                <option>Cholestrol</option>
+                <option>Syphilis</option>
+                <option>Blood Grouping</option>
+                <option>Sikel Cell</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid state.
+            </div>
+        </div>
+        <div class="col-md-2" style="padding-top: 32px;">
+            <a href="#">
+                <button class="btn button">Send to Lab Tech.</button>
+            </a>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container-fluid row">
+    <div class="col-md-3 offset-md-9">
+        <button class="btn button">View Lab Results</button>
+    </div>
+</div>
+<hr>
+<div class="container col-md-12">
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+            style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Doctors Prescription</label>
+        <button class="btn button mt-2">
+            Send to Pharmacy
+        </button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-3 offset-md-9">
+        <button class="btn button">
+            Logout
+        </button>
+    </div>
+</div>
+<div class="card footer" style="margin-top: 2.2%;">
+    <div class="card-body text-center">
+        <h5 class="card-title">ATU EMR SYSTEM</h5>
+        <p class="card-text">© Copyright 2021. ATU EMR SYSTEM. All rights reserved. l Terms of use l Privacy Policy</p>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<nav class="nav navbar-expand-md fixed-top top-nav">
+    <a href="" class="nav-brand"><img width="100" src="./images/atu_logo (2).png" alt=""></a>
+    <ul class="nav-text">
+        <section>
+            <h4><b>ACCRA TECHNICAL UNIVERSITY</b></h4>
+            <h6 style="margin-left: 50px;">INTEGRITY, CREATIVITY & EXCELLENCE</h6>
+        </section>
+    </ul>
+</nav>
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body" style="margin-top: 11.5%;">
+            <h1 class="text-center mb-3">
+                <i class="fas fa-user-plus"></i> Register
+            </h1>
+            <% include ./partials/messages %>
+            <form action="/users/register" method="POST">
+                <label for="">Position</label>
+                <div class="form-group">
+                    <select class="form-select" id="DDL" name="userType" required>
+                        <option value="" selected Disabled>Select Position</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Nurse">Nurse</option>
+                        <option value="LabTechnician">Lab Technician</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                            type="name"
+                            id="name"
+                            name="name"
+                            class="form-control"
+                            placeholder="Enter Name"
+                            value="<%= typeof name != 'undefined' ? name : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Enter Email"
+                            value="<%= typeof email != 'undefined' ? email : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="Create Password"
+                            value="<%= typeof password != 'undefined' ? password : '' %>"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input
+                            type="password"
+                            id="password2"
+                            name="password2"
+                            class="form-control"
+                            placeholder="Confirm Password"
+                            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    Register
+                </button>
+            </form>
+            <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+        </div>
+    </div>
+</div>
+<div class="card footer" style="margin-top: 1%;">
+    <div class="card-body text-center">
+        <h5 class="card-title">ATU EMR SYSTEM</h5>
+        <p class="card-text">© Copyright 2021. ATU EMR SYSTEM. All rights reserved. l Terms of use l Privacy Policy</p>
+    </div>
+</div>

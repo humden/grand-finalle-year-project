@@ -1,0 +1,161 @@
+<nav class="nav navbar-expand-md fixed-top top-nav">
+    <a href="" class="nav-brand"><img width="100" src="./images/atu_logo (2).png" alt=""></a>
+    <ul class="nav-text">
+        <section>
+            <h4 class="texts"><b>ACCRA TECHNICAL UNIVERSITY</b></h4>
+            <h6 style="margin-left: 50px;"> INTEGRITY, CREATIVITY & EXCELLENCE</h6>
+        </section>
+    </ul>
+</nav>
+<div class="container-fluid body-top">
+    <% include ./partials/messages %>
+    <form action="/api/opd_details" method="post" class="row g-3 needs-validation" novalidate style="margin-top: 8%;">
+            <div class="container-fluid body-top">
+                <div class="row">
+                    <div class="col-md-6 form">
+                        <h2 class="form-texts">Personal Information</h2>
+                        <div class="col-md-12">
+                            <label for="title" class="form-label">Title</label>
+                            <select class="form-select" name="title" id="title" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>Mr.</option>
+                                <option>Mrs.</option>
+                                <option>Prof.</option>
+                                <option>Dr.</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="patientId" class="form-label">Patient ID.</label>
+                            <input type="text" class="form-control" name="patientId" id="patientId" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="text" class="form-control" name="firstName" id="firstName" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="text" class="form-control" name="lastName" id="lastName" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="programmeLevel" class="form-label">Programme Level</label>
+                                <input type="number" class="form-control" name="programmeLevel" id="programmeLevel" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="age" class="form-label">Age</label>
+                                <input type="number" class="form-control" name="age" id="age" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="gender" class="form-label">Gender</label>
+                                <select class="form-select" id="gender" name="gender" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nationality" class="form-label">Nationality</label>
+                                <input type="text" class="form-control" name="nationality" id="nationality" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Section -->
+                    <div class="col-md-6">
+                        <h2 class="form-texts">Contact Information</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="phoneNumber" class="form-label">Phone Number</label>
+                                <input type="number" class="form-control" id="phoneNumber" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="dept" class="form-label">Department</label>
+                                <input type="text" name="department" class="form-control" id="dept" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-md-6">
+                                <label for="indexNumber" class="form-label">Index Number</label>
+                                <input type="text" name="indexNo" class="form-control" id="indexNumber" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <!--Patient Vitals-->
+                            <div class="row">
+                                <h2 class="form-texts mt-4">Patient Vitals</h2>
+                                <div class="col-md-6">
+                                    <label for="temp" class="form-label">Temperature ^C</label>
+                                    <input type="number" name="temperature" class="form-control" id="temp" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="weight" class="form-label">Weight (KG)</label>
+                                    <input type="number" name="weight" class="form-control" id="weight" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="bloodPressure" class="form-label">Blood Pressure</label>
+                                    <input type="number" name="bloodPressure" class="form-control" id="bloodPressure" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="height" class="form-label">Height</label>
+                                    <input type="number" name="height" class="form-control" id="height" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button class="btn button" type="submit">Send form</button>
+            </div>
+
+    </form>
+
+</div>
+<br>
+<div class="card footer">
+    <div class="card-body text-center">
+        <h5 class="card-title">ATU EMR SYSTEM</h5>
+        <p class="card-text">© Copyright 2021. ATU EMR SYSTEM. All rights reserved. l Terms of use l Privacy Policy</p>
+    </div>
+</div>

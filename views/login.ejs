@@ -1,0 +1,49 @@
+<nav class="nav navbar-expand-md fixed-top top-nav">
+    <a href="" class="nav-brand"><img width="100" src="./images/atu_logo (2).png" alt=""></a>
+    <ul class="nav-text">
+        <section>
+            <h4><b>ACCRA TECHNICAL UNIVERSITY</b></h4>
+            <h6 style="margin-left: 50px;">INTEGRITY, CREATIVITY & EXCELLENCE</h6>
+        </section>
+    </ul>
+</nav>
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body loginForm">
+            <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+            <% include ./partials/messages %>
+            <form action="/users/login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="Enter Email"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="Enter Password"
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <p class="lead mt-4">
+                No Account? <a href="/users/register">Register</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="card footer" style="margin-top: 6%;">
+    <div class="card-body text-center">
+        <h5 class="card-title">ATU EMR SYSTEM</h5>
+        <p class="card-text">© Copyright 2021. ATU EMR SYSTEM. All rights reserved. l Terms of use l Privacy Policy</p>
+    </div>
+</div>
