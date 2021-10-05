@@ -14,75 +14,82 @@
 
 </div>
 <hr>
-<div class="container">
-    <div class="row">
+<form action="/api/doctors_report" method="post">
+        <div class="container">
+            <div class="row">
 
-        <div class="col-md-4">
-            <fieldset>
-                <label for="">First Name</label><p><%= patient.firstName %></p><br>
-                <label for="">Last name</label><p><%= patient.lastName %></p><br>
-                <label for="">Age</label><p><%= patient.age %></p><br>
-                <label for="">Temperature</label><p><%= patient.temperature %></p><br>
-                <label for="">Weight</label><p><%= patient.weight %></p><br>
-                <label for="">Bp</label><p><%= patient.bloodPressure %></p><br>
-            </fieldset>
-            
-        </div>
+                <div class="col-md-4" style="border: 1px solid; padding: 30px;">
+                    <p style="color: blue; font-size: larger;">Patient info</p><hr>
+                    <div style="display: flex;">
+                        <label for="">First Name:   </label>
+                        <h3><%= patient.firstName %></h3>
+                    </div>
+                    <div style="display: flex;">
+                        <label for="">Last Name:   </label>
+                        <h3><%= patient.lastName%></h3>
+                    </div>
+                    <div style="display: flex;">
+                        <label for="">Age:   </label>
+                        <h3><%= patient.age %></h3>
+                    </div>
+                    <div style="display: flex;">
+                        <label for="">Temperature:   </label>
+                        <h3><%= patient.temperature%></h3>
+                    </div>
+                    <div style="display: flex;">
+                        <label for="">Weight:   </label>
+                        <h3><%= patient.weight %></h3>
+                    </div>
+                    <div style="display: flex;">
+                        <label for="">BP:   </label>
+                        <h3><%= patient.bloodPressure %></h3>
+                    </div>
+                </div>
 
-        <div class="col-md-3">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" onclick="Enabledd1(this)" id="flexSwitchCheckChecked">
-                <label class="form-check-label" for="flexSwitchCheckChecked">Lab Test</label>
+                <div class="col-md-3">
+                    <div class="form-check form-switch">
+                        <input name="conductLab" class="form-check-input" type="checkbox" onclick="Enabledd1(this)" id="flexSwitchCheckChecked">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Lab Test</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="DDL" class="form-label">Lab Test</label>
+                    <select name="labType" class="form-select" id="DDL" disabled="disabled" required>
+                        <option value="">Choose...</option>
+                        <option>Malaria</option>
+                        <option value="1">Typhoid</option>
+                        <option>Urine</option>
+                        <option>Pregnancy</option>
+                        <option>HB Full Blood Count</option>
+                        <option>Cholestrol</option>
+                        <option>Syphilis</option>
+                        <option>Blood Grouping</option>
+                        <option>Sikel Cell</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+                <div class="container col-md-6" style="margin-left: 390px; margin-top: -250px;">
+                    <div class="form-floating">
+                        <textarea name="doctorsPrescription" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Doctors Prescription</label>
+                        <button class="btn button mt-2" style="float: right;">
+                            Submit
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <label for="DDL" class="form-label">Lab Test</label>
-            <select class="form-select" id="DDL" disabled="disabled" required>
-                <option value="">Choose...</option>
-                <option>Malaria</option>
-                <option value="1">Typhoid</option>
-                <option>Urine</option>
-                <option>Pregnancy</option>
-                <option>HB Full Blood Count</option>
-                <option>Cholestrol</option>
-                <option>Syphilis</option>
-                <option>Blood Grouping</option>
-                <option>Sikel Cell</option>
-            </select>
-            <div class="invalid-feedback">
-                Please select a valid state.
-            </div>
-        </div>
-        <div class="col-md-2" style="padding-top: 32px;">
-            <a href="#">
-                <button class="btn button">Send to Lab Tech.</button>
-            </a>
-        </div>
-    </div>
-</div>
-<hr>
-<div class="container-fluid row">
-    <div class="col-md-3 offset-md-9">
-        <button class="btn button">View Lab Results</button>
-    </div>
-</div>
-<hr>
-<div class="container col-md-12">
-    <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-            style="height: 100px"></textarea>
-        <label for="floatingTextarea2">Doctors Prescription</label>
-        <button class="btn button mt-2">
-            Send to Pharmacy
-        </button>
-    </div>
-</div>
+        <hr>
+        <hr>
+        
+</form>
 <hr>
 <div class="row">
     <div class="col-md-3 offset-md-9">
-        <button class="btn button">
-            Logout
-        </button>
+        <a class="btn button" href="/users/logout">Logout</a>
     </div>
 </div>
 <div class="card footer" style="margin-top: 2.2%;">

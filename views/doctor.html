@@ -11,7 +11,7 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
-    <script src="/doctor.js"></script>
+    <script defer src="/doctor.js" type="text/javascript"></script>
     <title>Document</title>
 </head>
 
@@ -27,72 +27,27 @@
             </ul>
         </nav>
         <div class="container row body-top" style="padding-top: 10%;">
-            <div class="col-md-6" style="display: flex;">
+            <div class="useonce col-md-6" style="display: flex;">
                 <p class="patientBtn"></p>
                 <a href="/api/patient_details">
                     <button class="btn button" type="submit">click to view ready patient to see you</button>
                 </a>
             </div>
 
-        </div>
-        <hr>
-        <div class="container">
-            <div class="row">
+            <div class="useonce col-md-6" style="margin-left: 100%;">
+                <a href="/api/lab_results">
+                    <button class="btn button" type="submit">View lab results</button>
+                </a>
+            </div>
 
-                <div class="col-md-3">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" onclick="Enabledd1(this)" id="flexSwitchCheckChecked">
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Lab Test</label>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <label for="DDL" class="form-label">Lab Test</label>
-                    <select class="form-select" id="DDL" disabled="disabled" required>
-                        <option value="">Choose...</option>
-                        <option>Malaria</option>
-                        <option value="1">Typhoid</option>
-                        <option>Urine</option>
-                        <option>Pregnancy</option>
-                        <option>HB Full Blood Count</option>
-                        <option>Cholestrol</option>
-                        <option>Syphilis</option>
-                        <option>Blood Grouping</option>
-                        <option>Sikel Cell</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Please select a valid state.
-                    </div>
-                </div>
-                <div class="col-md-2" style="padding-top: 32px;">
-                    <a href="#">
-                        <button class="btn button">Send to Lab Tech.</button>
-                    </a>
-                </div>
-            </div>
         </div>
         <hr>
-        <div class="container-fluid row">
-            <div class="col-md-3 offset-md-9">
-                <button class="btn button">View Lab Results</button>
-            </div>
-        </div>
-        <hr>
-        <div class="container col-md-12">
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                    style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Doctors Prescription</label>
-                <button class="btn button mt-2">
-                    Send to Pharmacy
-                </button>
-            </div>
-        </div>
         <hr>
         <div class="row">
             <div class="col-md-3 offset-md-9">
-                <button class="btn button">
+                <a href="/users/logout"><button class="btn button">
                     Logout
-                </button>
+                </button></a>
             </div>
         </div>
         <div class="card footer" style="margin-top: 2.2%;">

@@ -1,0 +1,46 @@
+
+
+<nav class="nav navbar-expand-md fixed-top top-nav">
+    <a href="" class="nav-brand"><img width="100" src="/images/atu_logo (2).png" alt=""></a>
+    <ul class="nav-text">
+        <section>
+            <h4 class="texts"><b>ACCRA TECHNICAL UNIVERSITY</b></h4>
+            <h6 style="margin-left: 50px;">INTEGRITY, CREATIVITY & EXCELLENCE</h6>
+        </section>
+    </ul>
+</nav>
+<div class="container row body-top" style="padding-top: 10%;">
+    <div class="col-md-6" style="display: flex;">
+        
+    </div>
+
+</div>
+<hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Lab Info</h3><br
+                    <p>Name: Dennis</p>
+                    <p>Last visited: <span>10/20/21</span></p>
+                    <p>Type: <%=patient.labType %></p>
+                </div>
+                <div class="col-md-6">
+                    <form action="/api/update_patient_details" method="post">
+                    <div class="form-floating">
+                        <textarea name="labDetails" class="form-control" placeholder="Leave a comment here" name="labResults" id="floatingTextarea2"
+                            style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Type Lab results here...</label>
+                        <button class="btn button mt-2" type="submit">
+                            Send to Doctor
+                        </button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+<div class="card footer" style="margin-top: 2.2%;">
+    <div class="card-body text-center">
+        <h5 class="card-title">ATU EMR SYSTEM</h5>
+        <p class="card-text">© Copyright 2021. ATU EMR SYSTEM. All rights reserved. l Terms of use l Privacy Policy</p>
+    </div>
+</div>

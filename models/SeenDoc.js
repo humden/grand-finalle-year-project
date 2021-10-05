@@ -1,22 +1,30 @@
 const mongoose= require('mongoose')
 
+
 const SeenDocSchema = new mongoose.Schema({
-    doctorsReport:{
+    doctorsPrescription:{
         type: String,
         required: false
     },
     conductLab: {
-        type: Boolean,
-        required: false
+        type: String,
+        required: true,
+        default: "off"
     },
     labType:{
         type: String,
         required: false,
         default: ""
     },
+    labDetails:{
+        type: String,
+        required: false,
+        default: ""
+    },
     completed: {
-        type: Bolean,
-        required: false
+        type: Boolean,
+        required: true,
+        default: false
     }
 
 });

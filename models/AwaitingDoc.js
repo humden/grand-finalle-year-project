@@ -1,9 +1,14 @@
 const mongoose = require('mongoose');
-
+const ObjectId = mongoose.Schema.Types.ObjectId;
+    
 const AwaitingDocSchema = new mongoose.Schema({
     patientId: {
         type: String,
         required: true
+    },
+    user: {
+        type: ObjectId,
+        ref: 'User'
     },
     title:{
         type: String,
@@ -23,7 +28,7 @@ const AwaitingDocSchema = new mongoose.Schema({
     },
     age:{
         type: Number,
-        required: true
+        required: false
     },
     programmeLevel:{
         type: Number,
